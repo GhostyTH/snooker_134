@@ -29,9 +29,8 @@ public class Ball : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnMouseDown()
     {
-        
+        Debug.Log(point);
     }
 }
