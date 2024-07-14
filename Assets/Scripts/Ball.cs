@@ -32,5 +32,6 @@ public class Ball : MonoBehaviour
     private void OnMouseDown()
     {
         Debug.Log(point);
+        Destroy(gameObject);
     }
 }
