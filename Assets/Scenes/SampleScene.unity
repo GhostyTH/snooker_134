@@ -1377,6 +1377,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScore: 0
+  ballPositions:
+  - {fileID: 42516759}
+  - {fileID: 477864975}
+  - {fileID: 134176573}
+  - {fileID: 942041070}
+  - {fileID: 363953036}
+  - {fileID: 1316666553}
+  - {fileID: 1311652126}
+  - {fileID: 1075684592}
 --- !u!4 &1736900344
 Transform:
   m_ObjectHideFlags: 0

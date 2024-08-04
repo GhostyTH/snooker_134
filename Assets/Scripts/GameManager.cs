@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     private int playerScore = 0;
     public int PlayerScore { get { return playerScore; } set { playerScore = value; } }
 
+    [SerializeField]
+    private GameObject[] ballPositions;
+
     public static GameManager instance;
     // Start is called before the first frame update
     void Start()
