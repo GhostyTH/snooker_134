@@ -25,6 +25,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject ballLine;
 
+    [SerializeField]
+    private GameObject camera;
+
     public static GameManager instance;
     // Start is called before the first frame update
     void Start()
@@ -38,6 +41,7 @@ public class GameManager : MonoBehaviour
         SetBall(BallColor.Pink, 6);
         SetBall(BallColor.Black, 7);
 
+        SetCameraBehind();
     }
 
     // Update is called once per frame
@@ -57,6 +61,8 @@ public class GameManager : MonoBehaviour
         rd.AddRelativeForce(Vector3.forward * 70, ForceMode.Impulse);
 
         ballLine.SetActive(false);
+
+        camera.transform.parent = null;
     }
 
     private void SetBall(BallColor col, int i)
@@ -82,5 +88,13 @@ public class GameManager : MonoBehaviour
         cueBall.transform.eulerAngles = Vector3.zero;
 
         ballLine.SetActive(true);
+        SetCameraBehind();
+    }
+
+    private void SetCameraBehind()
+    {
+        camera.transform.parent = cueBall.transform;
+        camera.transform.position = cueBall.transform.position + new Vector3(0f, 7f, -10f);
+        camera.transform.eulerAngles = new Vector3(20f, 0f, 0f);
     }
 }
