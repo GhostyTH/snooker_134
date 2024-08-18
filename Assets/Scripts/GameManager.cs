@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private float xInput;
 
+    [SerializeField]
+    private GameObject ballLine;
+
     public static GameManager instance;
     // Start is called before the first frame update
     void Start()
@@ -52,6 +55,8 @@ public class GameManager : MonoBehaviour
     {
         Rigidbody rd = cueBall.GetComponent<Rigidbody>();
         rd.AddRelativeForce(Vector3.forward * 70, ForceMode.Impulse);
+
+        ballLine.SetActive(false);
     }
 
     private void SetBall(BallColor col, int i)
@@ -75,5 +80,7 @@ public class GameManager : MonoBehaviour
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         cueBall.transform.eulerAngles = Vector3.zero;
+
+        ballLine.SetActive(true);
     }
 }
