@@ -43,12 +43,15 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
             ShootBall();
             RotateBall();
+
+        if (Input.GetKeyDown(KeyCode.Backspace))
+            ResetBall();
     }
 
     private void ShootBall()
     {
         Rigidbody rd = cueBall.GetComponent<Rigidbody>();
-        rd.AddRelativeForce(Vector3.forward * 50, ForceMode.Impulse);
+        rd.AddRelativeForce(Vector3.forward * 70, ForceMode.Impulse);
     }
 
     private void SetBall(BallColor col, int i)
@@ -64,5 +67,13 @@ public class GameManager : MonoBehaviour
     {
         xInput = Input.GetAxis("Horizontal");
         cueBall.transform.Rotate(new Vector3(0f, xInput, 0f));
+    }
+    
+    private void ResetBall()
+    {
+        Rigidbody rb = cueBall.GetComponent<Rigidbody>();
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        cueBall.transform.eulerAngles = Vector3.zero;
     }
 }
