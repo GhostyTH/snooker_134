@@ -1,8 +1,8 @@
-using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameObject camera;
+
+    [SerializeField]
+    private TMP_Text scoreText;
 
     public static GameManager instance;
     // Start is called before the first frame update
@@ -96,5 +99,11 @@ public class GameManager : MonoBehaviour
         camera.transform.parent = cueBall.transform;
         camera.transform.position = cueBall.transform.position + new Vector3(0f, 7f, -10f);
         camera.transform.eulerAngles = new Vector3(20f, 0f, 0f);
+    }
+
+    public void UpdateScore(int n)
+    {
+        playerScore += n;
+        scoreText.text = $"Player Score: {playerScore}";
     }
 }

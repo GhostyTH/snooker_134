@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1860738388822199628, guid: 53a27010c4aab0244b07815138069473, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3322775986523706671, guid: 53a27010c4aab0244b07815138069473, type: 3}
       propertyPath: m_LocalPosition.x
@@ -255,7 +255,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1860738388822199628, guid: 53a27010c4aab0244b07815138069473, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3322775986523706671, guid: 53a27010c4aab0244b07815138069473, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1062,7 +1062,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1860738388822199628, guid: 53a27010c4aab0244b07815138069473, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3322775986523706671, guid: 53a27010c4aab0244b07815138069473, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1601,7 +1601,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1860738388822199628, guid: 53a27010c4aab0244b07815138069473, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3322775986523706671, guid: 53a27010c4aab0244b07815138069473, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1662,7 +1662,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1860738388822199628, guid: 53a27010c4aab0244b07815138069473, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1860738388822199628, guid: 53a27010c4aab0244b07815138069473, type: 3}
       propertyPath: m_ReceiveShadows
@@ -1981,7 +1981,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score:'
+  m_text: 'Player Score:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2102,6 +2102,7 @@ MonoBehaviour:
   xInput: 0
   ballLine: {fileID: 329319388}
   camera: {fileID: 963194225}
+  scoreText: {fileID: 1714907886}
 --- !u!4 &1736900344
 Transform:
   m_ObjectHideFlags: 0
@@ -2165,7 +2166,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1860738388822199628, guid: 53a27010c4aab0244b07815138069473, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3322775986523706671, guid: 53a27010c4aab0244b07815138069473, type: 3}
       propertyPath: m_LocalPosition.x

@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Hole : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnCollisionEnter(Collision collision)
     {
-        
-    }
+        Ball B = collision.gameObject.GetComponent<Ball>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (B != null)
+        {
+            GameManager.instance.UpdateScore(B.Point);
+            Destroy(B.gameObject);
+        }
     }
 }
